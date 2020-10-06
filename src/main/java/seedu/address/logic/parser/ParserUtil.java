@@ -72,12 +72,8 @@ public class ParserUtil {
      * @throws ParseException if the given {@code address} is invalid.
      */
     public static Remark parseRemark(String remark) throws ParseException {
-        requireNonNull(remark);
-        String trimmedAddress = remark.trim();
-        if (!Remark.isValidAddress(trimmedAddress)) {
-            throw new ParseException(Remark.MESSAGE_CONSTRAINTS);
-        }
-        return new Remark(trimmedAddress);
+        String trimmedRemark = remark == null ? "" : remark.trim();
+        return new Remark(trimmedRemark);
     }
 
     /**

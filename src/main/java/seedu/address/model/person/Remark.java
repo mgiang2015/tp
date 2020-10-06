@@ -29,13 +29,6 @@ public class Remark {
         this.remarkStr = remarkStr;
     }
 
-    /**
-     * Returns true if a given string is a valid email.
-     */
-    public static boolean isValidAddress(String test) {
-        return test.matches(VALIDATION_REGEX);
-    }
-
     @Override
     public String toString() {
         return remarkStr;
